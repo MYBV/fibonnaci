@@ -49,7 +49,7 @@ Ejecuta el siguiente comando
 
 ## Uso
     
-   La API tiene un único endpoint que acepta un parámetro n que representa el índice de Fibonacci a calcular:
+   La API tiene un único endpoint que acepta un parámetro numero que representa el índice de Fibonacci a calcular:
 
    ```GET /fibonacci/:numero```
 
@@ -57,8 +57,8 @@ Ejecuta el siguiente comando
    La respuesta será un objeto JSON con el valor de Fibonacci correspondiente al índice numero:
 
     {
-        "indice": 3,
-        "valor": 2
+        "indice": "3",
+        "valor": "2"
     }
 
    ### Ejemplo
@@ -70,8 +70,8 @@ Ejecuta el siguiente comando
    ```response```
 
     {
-        "indice": 6,
-        "valor": 8
+        "indice": "6",
+        "valor": "8"
     }
 
    Si desea probar el endpoint del aPI puede ingresar lo siguiente en su navegador:
@@ -79,7 +79,7 @@ Ejecuta el siguiente comando
    reemplazando [:numero] por el índice que desea obtener, por ejemplo, para solicitar el indice 3 la ruta quedaría de la siguiente forma: 
    ```http://localhost:5000/fibonacci/3```
 
-   también puede importar la colección de ```postman``` que se encuentra en el archivo ```Fibonacci.postman_collection.json``` y ejecutar el request del endpoint desde este aplicativo.
+   también puede importar la colección de ```postman``` que se encuentra en el archivo ```Fibonacci.postman_collection.json``` y ejecutar el request del endpoint desde este aplicativo, cambiando al final del request el indice que se desea solicitar.
 
 ## Dockerizando 🐋
 
@@ -102,7 +102,7 @@ Con esto descargará la imagen del docker e iniciará su funcionamiento.
    ### Optimizaciones: 👌
 
    * Implementar una memoria caché para almacenar los resultados anteriores, lo que podría mejorar el rendimiento para índices grandes y reducir el tiempo de procesamiento necesario para calcularlos.
-   * Investigar el valor máximo que soporta la fórmula cerrada de Fibonacci para validar que el índice requerido no sea mayor a este.
+   * Determinar el valor máximo que soporta la fórmula cerrada de Fibonacci para validar que el índice requerido no sea mayor a este valor.
 
 
 ## Construido con 🛠️
